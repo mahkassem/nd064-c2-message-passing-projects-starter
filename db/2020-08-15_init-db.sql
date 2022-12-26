@@ -4,8 +4,6 @@ CREATE TABLE person (
     last_name VARCHAR NOT NULL,
     company_name VARCHAR NOT NULL
 );
-
-
 CREATE TABLE location (
     id SERIAL PRIMARY KEY,
     person_id INT NOT NULL,
@@ -15,3 +13,4 @@ CREATE TABLE location (
 );
 CREATE INDEX coordinate_idx ON location (coordinate);
 CREATE INDEX creation_time_idx ON location (creation_time);
+ALTER SEQUENCE location_id_seq RESTART WITH 69

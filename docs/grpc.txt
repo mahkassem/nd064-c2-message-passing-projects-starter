@@ -1,0 +1,16 @@
+gprc is use in this project to allow connection service to communicate with person service
+to retirve the data from person service. The person service is a rest service.
+
+using the GetAll method in person_grpc service to get all the data from person service.
+send Empty request and get the response from person service.
+
+the person grpc message is defined in person.proto file.
+
+person message grpc format:
+
+message PersonMessage {
+    int32 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string company_name = 4;
+}

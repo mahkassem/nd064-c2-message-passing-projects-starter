@@ -1,0 +1,3 @@
+- gRPC for connection service to get persons from Person (Service)
+- REST API for client to query person data and connection data
+- Kafka to handle sheer volume of location data comming from client

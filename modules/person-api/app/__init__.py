@@ -12,7 +12,7 @@ def create_app(env=None):
 
     app = Flask(__name__)
     app.config.from_object(config_by_name[env or "test"])
-    api = Api(app, title="UdaConnect API", version="0.1.0")
+    api = Api(app, title="UdaConnect Person API", version="0.1.0")
 
     CORS(app)  # Set CORS for development
 
@@ -21,6 +21,6 @@ def create_app(env=None):
 
     @app.route("/health")
     def health():
-        return jsonify("healthy")
+        return jsonify("person api is healthy")
 
     return app

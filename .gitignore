@@ -123,3 +123,7 @@ app/app-test.db
 
 .vagrant
 .ds_store
+
+# kubectl
+kubectl
+kubectl.sha256
