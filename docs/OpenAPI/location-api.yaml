@@ -1,0 +1,76 @@
+openapi: 3.0.1
+info:
+  title: UdaConnect Location API
+  version: 0.1.0
+servers:
+  - url: /
+tags:
+  - name: UdaConnect Location API
+    description: Connections via geolocation.
+paths:
+  /api/locations:
+    get:
+      tags:
+        - UdaConnect Location API
+      operationId: get_location_resource
+      parameters:
+        - name: location_id
+          in: query
+          description: Unique ID for a given Location
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content: {}
+    post:
+      tags:
+        - UdaConnect Location API
+      operationId: post_location_resource
+      parameters:
+        - name: location_id
+          in: query
+          description: Unique ID for a given Location
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content: {}
+  /api/locations/{location_id}:
+    get:
+      tags:
+        - UdaConnect Location API
+      parameters:
+        - name: location_id
+          in: path
+          description: Unique ID for a given Location
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content: {}
+    post:
+      tags:
+        - UdaConnect Location API
+      parameters:
+        - name: location_id
+          in: path
+          description: Unique ID for a given Location
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content: {}
+components:
+  responses:
+    MaskError:
+      description: When any error occurs on mask
+      content: {}
+    ParseError:
+      description: When a mask can't be parsed
+      content: {}
